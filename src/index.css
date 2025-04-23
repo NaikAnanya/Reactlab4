@@ -1,0 +1,101 @@
+/* Container */
+.todo-container {
+  text-align: center;
+  font-family: inherit;
+  margin-top: 50px;
+}
+
+/* Input and Button */
+.task-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.task-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.add-button {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.add-button:hover {
+  border-color: #646cff;
+}
+
+/* Task List */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Task Items */
+.pendingTask, .completedTask {
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Completed Task */
+.completedTask {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Task Actions */
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Toggle Icon */
+.task-actions span {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Delete Button */
+.deleteButton {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Light Theme Adjustments */
+@media (prefers-color-scheme: light) {
+  .task-input {
+    background-color: #fff;
+    color: #213547;
+  }
+
+  .task-input::placeholder {
+    color: #aaa;
+  }
+
+  .add-button {
+    background-color: #f9f9f9;
+  }
+
+  .pendingTask, .completedTask {
+    border-bottom: 1px solid #ddd;
+  }
+}
